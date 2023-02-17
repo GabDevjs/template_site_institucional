@@ -12,7 +12,10 @@ module.exports = {
       screens: {
         "2xl": "1536px",
         "4xl": "2048px",
-      }
+      },
+      colors: {
+        "primary": "#212F3D"
+      },
     },
   },
   plugins: [
