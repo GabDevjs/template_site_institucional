@@ -1,3 +1,4 @@
+import { Widgtes } from "@/components/organisms/Widgets";
 import { Footer } from "@/organisms/Footer";
 import { Navbar } from "@/organisms/Navbar";
 import Head from "next/head";
@@ -17,9 +18,8 @@ export const Layout = (props: LayoutProps) => {
       </Head>
 
       <Navbar />
-      <main>
-        {children}
-      </main>
+      <main>{children}</main>
+      <Widgtes />
       <Footer />
     </>
   );
