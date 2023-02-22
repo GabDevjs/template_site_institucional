@@ -6,12 +6,13 @@ import { socialMedias } from "@/objetos/social_medias";
 import Link from "next/link";
 import { Fragment } from "react";
 import { ItemsNavegacao } from "@/objetos/items_navegacao";
+import { Button } from "../atoms/Buttons";
 
 export const Navbar = () => {
   return (
     <>
-      <div className="fixed top-0 right-0 left-0 z-50 w-screen border-zinc-400 bg-zinc-700 opacity-95  delay-300 md:border-b">
-        <div className="mx-auto flex h-5 max-w-3xl px-8 md:max-w-4xl items-center justify-center py-2 sm:px-10 lg:px-12">
+      <div className="fixed top-0 right-0 left-0 z-50 w-screen border-zinc-400 bg-zinc-700 opacity-95 backdrop-blur-md md:border-b">
+        <div className="mx-auto flex h-6 max-w-4xl items-center justify-center px-8 py-2 sm:px-10 md:max-w-6xl lg:px-12 xl:h-7">
           {/* Currency selector */}
           <div className="flex w-full items-center justify-between text-sm">
             <div className="flex h-full items-center space-x-6 font-medium text-zinc-100">
@@ -40,24 +41,28 @@ export const Navbar = () => {
       </div>
       <Disclosure as={Fragment}>
         {({ open }) => (
-          <nav className="vidro fixed top-5 left-0 right-0 z-50 bg-stone-200 bg-opacity-90 text-neutral-700 shadow-xl dark:bg-neutral-700 dark:bg-opacity-80 dark:text-gray-100">
-            <div className="mx-auto max-w-3xl px-8 md:max-w-4xl md:border-none  lg:px-12 2xl:px-14">
-              <div className="flex h-16 items-center justify-between">
-                <div className="flex-shrink-0 ">
-                  <Logo />
+          <nav className="fixed top-6 left-0 right-0  z-50 bg-stone-200 bg-opacity-90 text-neutral-700 shadow-xl backdrop-blur-md dark:bg-neutral-700 dark:bg-opacity-80 dark:text-gray-100 xl:top-7">
+            <div className="mx-auto max-w-4xl px-8 md:max-w-6xl md:border-none  lg:px-12 2xl:px-14">
+              <div className="flex h-16 items-center justify-between xl:h-20">
+                <div className="flex items-center gap-8">
+                  <div className="flex-shrink-0 ">
+                    <Logo />
+                  </div>
+                  <div className="hidden items-center justify-center gap-6 sm:ml-6 sm:flex">
+                    {ItemsNavegacao?.map((linkValues, index) => (
+                      <Link
+                        key={index}
+                        href={linkValues.link}
+                        className="hover:bg-secondary-yellow-200 flex   w-full items-center justify-center rounded-md py-2  text-lg font-medium text-zinc-900 transition-all  duration-100 hover:text-neutral-700 dark:text-gray-50"
+                      >
+                        <linkValues.icon className="mr-2 inline" />
+                        <p>{linkValues.name}</p>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-                <div className="hidden sm:ml-6 sm:block">
-                  {ItemsNavegacao?.map((link, index) => (
-                    <Disclosure.Button
-                      as="a"
-                      key={index}
-                      href={link.link}
-                      className="hover:bg-secondary-yellow-200 flex   w-full items-center justify-center rounded-md py-2  text-lg font-medium text-zinc-900 transition-all  duration-100 hover:text-neutral-700 dark:text-gray-50"
-                    >
-                      <link.icon className="mr-2 inline" />
-                      <p>{link.name}</p>
-                    </Disclosure.Button>
-                  ))}
+                <div className="hidden items-center justify-center gap-6 sm:ml-6 sm:flex">
+                  <Button Name="Button Navbar" Text="Botão da navbar" />
                 </div>
                 <div data-aos="zoom-in" className="-mr-2 flex sm:hidden">
                   {/* Mobile menu button */}
@@ -91,9 +96,9 @@ export const Navbar = () => {
                       as="a"
                       key={index}
                       href={link.link}
-                      className="hover:bg-secondary-yellow-200 flex   w-full items-center justify-center rounded-md py-2  text-lg font-medium text-zinc-900 transition-all  duration-100 hover:text-neutral-700 dark:text-gray-50"
+                      className="hover:bg-secondary-yellow-200 flex w-full items-center justify-center rounded-md py-2  text-xl font-medium text-zinc-900 transition-all  duration-100 hover:text-neutral-700 dark:text-gray-50"
                     >
-                      <link.icon className="mr-2 inline" />
+                      <link.icon className="mr-1 inline text-3xl" />
                       <p>{link.name}</p>
                     </Disclosure.Button>
                   ))}
