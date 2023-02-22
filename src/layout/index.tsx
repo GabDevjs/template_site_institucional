@@ -18,7 +18,7 @@ export const Layout = (props: LayoutProps) => {
       </Head>
 
       <Navbar />
-      <main>{children}</main>
+      {children}
       <Widgtes />
       <Footer />
     </>

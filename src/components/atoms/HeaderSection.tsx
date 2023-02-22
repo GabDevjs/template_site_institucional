@@ -1,5 +1,5 @@
 type HeaderSectionProps = {
-  title: string;
+  title?: string;
   description?: string;
 };
 
