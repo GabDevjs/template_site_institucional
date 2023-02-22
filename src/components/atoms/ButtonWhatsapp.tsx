@@ -29,9 +29,9 @@ export const ButtonWhats = () => {
       <Link
         href={url ? url : "#Sem Link"}
         target="_blanck"
-        className=" focus:outline-secondary-green-200 group flex items-center rounded-full border border-green-300 bg-[#25d366] p-2 text-gray-100 shadow-2xl shadow-green-700 transition-all delay-700 duration-200 hover:scale-110 focus:outline-1 dark:border-green-700 md:p-3"
+        className=" focus:outline-secondary-green-200 group flex items-center rounded-full border border-green-300 bg-[#25d366] p-3 text-gray-100 shadow-2xl shadow-green-700 transition-all delay-700 duration-200 hover:scale-110 focus:outline-1 dark:border-green-700 md:p-4"
       >
-        <BsWhatsapp className="h-5 w-5 transition-all group-hover:scale-105 lg:h-8 lg:w-8" />
+        <BsWhatsapp className="h-8 w-8 transition-all group-hover:scale-105 lg:h-10 lg:w-10" />
       </Link>
     </div>
   );
