@@ -14,7 +14,8 @@ module.exports = {
         "4xl": "2048px",
       },
       colors: {
-        "primary": "#212F3D"
+        "primary": "#212F3D",
+        "secondary": "#ff0000"
       },
     },
   },
