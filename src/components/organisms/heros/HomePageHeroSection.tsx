@@ -1,8 +1,9 @@
+import { Button } from "@/components/atoms/Buttons";
 import { Container } from "@/components/quarks/Container";
 
 export const HomePageHeroSection = () => {
   return (
-    <header className="relative  isolate h-[99vh] ">
+    <header className="relative  isolate h-screen ">
       <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
         <svg
           className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
@@ -29,7 +30,7 @@ export const HomePageHeroSection = () => {
         </svg>
       </div>
 
-      <main className="relative h-full py-24 sm:py-32 lg:pb-40">
+      <main className="relative h-full ">
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -40,19 +41,21 @@ export const HomePageHeroSection = () => {
               lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
               fugiat aliqua.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
-                className="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Get started
-              </a>
+            <div className="flex items-center justify-center gap-x-6 pt-10">
+              <Button Name="Get started" Text="Get started" />
+              <Button
+                Name="lear more"
+                Text={
+                  <>
+                    Learn more <span aria-hidden="true">→</span>
+                  </>
+                }
+                bgTransparente
+              />
               <a
                 href="#"
                 className="text-base font-semibold leading-7 text-gray-900"
-              >
-                Learn more <span aria-hidden="true">→</span>
-              </a>
+              ></a>
             </div>
           </div>
         </Container>
