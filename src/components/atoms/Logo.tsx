@@ -5,7 +5,7 @@ export const Logo = () => {
   return (
     <Link href="/">
       <div className="flex items-center ">
-        <i className="h-10 w-10 rounded-full bg-zinc-400 "></i>
+        <i className="h-10 xl:h-12 w-10 xl:w-12 rounded-full bg-zinc-400 "></i>
       </div>
     </Link>
   );
